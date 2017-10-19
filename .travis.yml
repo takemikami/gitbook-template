@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "v8.3.0"
+
+cache:
+  directories:
+    - "node_modules"
+
+before_script:
+  - npm install -g gulp-cli
+script:
+  - gulp textlint
