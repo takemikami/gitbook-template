@@ -2,11 +2,10 @@ var gulp = require('gulp');
 var textlint = require('gulp-textlint');
 
 gulp.task('textlint', function(){
-  return gulp.src(['./**/*.md', '!node_modules/**/*'])
+  return gulp.src(['./src/**/*.md'])
     .pipe(textlint());
 });
 
 gulp.task('watch', ['textlint'], function(){
-  gulp.watch('./**/*.md', ['textlint']);
+  gulp.watch('./src/**/*.md', ['textlint']);
 });
-
